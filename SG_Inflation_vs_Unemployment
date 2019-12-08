@@ -1,4 +1,4 @@
-# Simple Linear Regression
+# Economic relationship between inflation and unemployment
 
 # Importing the libraries
 import numpy as np
