@@ -1,0 +1,20 @@
+# Simple Linear Regression
+
+# Importing the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Importing the dataset
+SG_dataset = pd.read_csv(r'C:\Users\Chang Foo Yong\Desktop\GitHub\Singapore_Inf_Unem.csv')
+SG_Infl_Avg = SG_dataset.iloc[:, 1].values # SG: Inflation rate defined as percentage changes in annual average consumer prices.
+SG_Infl_EOP = SG_dataset.iloc[:, 2].values # SG: Inflation rate defined as percentage changes in annual end-of-period consumer prices.
+SG_Unemp = SG_dataset.iloc[:, 3].values # SG: Unemployment rate
+
+# Visualising plot of inflation rate against unemployment rate
+plt.scatter(SG_Infl_Avg, SG_Unemp, color = 'red')
+plt.scatter(SG_Infl_EOP, SG_Unemp, color = 'blue')
+plt.title('Singapore: Annual Average (Red) & End-of-Period (Blue) Inflation vs Unemployment')
+plt.xlabel('Annual Inflation (Average, End-of-Period)')
+plt.ylabel('Unmployment Rate')
+plt.show()
